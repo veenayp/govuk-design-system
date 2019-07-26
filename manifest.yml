@@ -1,6 +1,9 @@
 ---
 applications:
 - name: govuk-design-system-origin
+  routes:
+    - route: govuk-design-system-origin.cloudapps.digital
+    - route: design-system.service.gov.uk
   # NGINX requires 20 MB of RAM to serve static assets. Reduce RAM allocation
   # from the default 1 GB allocated to containers by default to 64M.
   memory: 64M
@@ -9,7 +12,7 @@ applications:
   # by GitHub URL
   #
   # https://docs.cloud.service.gov.uk/deploying_apps.html#how-to-use-custom-buildpacks
-  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git#v1.0.3
+  buildpack: https://github.com/cloudfoundry/nginx-buildpack.git#v1.0.14
   # Run two instances to ensure availability
   #
   # https://docs.cloud.service.gov.uk/managing_apps.html#scaling

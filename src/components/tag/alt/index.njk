@@ -1,0 +1,11 @@
+---
+title: Alt tags
+layout: layout-example.njk
+---
+
+{%- from "govuk/components/tag/macro.njk" import govukTag -%}
+
+{{ govukTag({
+  text: "alpha",
+  classes: "govuk-tag--purple"
+}) }}
